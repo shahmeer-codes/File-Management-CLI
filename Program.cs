@@ -28,11 +28,8 @@ class Program
                 r.Read();
                 break;
             case 3:
-                StreamWriter writer = new StreamWriter(@"C:\Users\Shahmeer\Desktop\data.txt");
-                Console.WriteLine("Enter the text to write to the file:");
-                string text = Console.ReadLine();
-                writer.WriteLine(text);
-                writer.Close();
+                Overwriter o = new Overwriter();
+                o.Overwrite();
                 break;
             case 4:
                 StreamWriter writer1 = new StreamWriter(@"C:\Users\Shahmeer\Desktop\data.txt",true);
