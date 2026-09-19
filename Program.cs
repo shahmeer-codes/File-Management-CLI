@@ -7,9 +7,16 @@ class Program
         bool repeat= true;
         while(repeat)
         {
-        Console.WriteLine("\t<---File manager--->");
-        Console.WriteLine("\t1. Create a file\n\t2. Read a file\n\t3. Apend the previous text in a file\n\t4. Add data in a file with previous data\n\t5. Exit");
-        int choice = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("<--- File Manager --->");
+            Console.WriteLine("1. Create a file");
+            Console.WriteLine("2. Read a file");
+            Console.WriteLine("3. Overwrite file (It may delete the existing data)");
+            Console.WriteLine("4. Append data to file (Add new data atbthe edn without deleting the existing data)");
+            Console.WriteLine("5. Exit");
+            Console.Write("Enter your choice: ");
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
         switch (choice)
         {
             case 1:
@@ -19,10 +26,8 @@ class Program
             case 2:
                 StreamReader r = new StreamReader(@"C:\Users\Shahmeer\Desktop\data.txt");
                 string line = r.ReadToEnd();
-                while ((line = r.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                }
+                Console.WriteLine(line);
+               
                 r.Close();
                 break;
             case 3:
