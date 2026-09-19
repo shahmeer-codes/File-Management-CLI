@@ -22,10 +22,10 @@ class Program
                 }
                 break;
             case 3:
-                StreamWriter w = new StreamWriter(@"C:\Users\Shahmeer\Desktop\data.txt");
+                StreamWriter writer = new StreamWriter(@"C:\Users\Shahmeer\Desktop\data.txt");
                 Console.WriteLine("Enter the text to write to the file:");
                 string text = Console.ReadLine();
-                w.WriteLine(text);
+                writer.WriteLine(text);
                 break;
             case 4:
                 File.Create(@"C:\Users\Shahmeer\Desktop\data.txt");
