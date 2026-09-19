@@ -15,7 +15,7 @@ class Program
             Console.WriteLine("1. Create another file");
             Console.WriteLine("2. Read a file");
             Console.WriteLine("3. Overwrite file (It may delete the existing data)");
-            Console.WriteLine("4. Append data to file (Add new data atbthe edn without deleting the existing data)");
+            Console.WriteLine("4. Append data to file (Add new data at the edn without deleting the existing data)");
             Console.WriteLine("5. Change the Working File");
             Console.WriteLine("6. Exit");
 
@@ -31,7 +31,11 @@ class Program
         {
             case 1:
                 File_creator f = new File_creator();
-                f.Create();
+                if(f.Create() =="")
+                {
+                    Console.WriteLine("File creation failed.");
+                    repeat = false;
+                }
                 break;
             case 2:
                 Reader r =new Reader();

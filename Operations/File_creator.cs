@@ -1,10 +1,12 @@
 using System;
 class File_creator{
-        public void Create(){
+        public string Create(){
             Console.Write("Enter the file name: ");
             string? name = Console.ReadLine();
             string current_path=Directory.GetCurrentDirectory();
-            File.Create($@"{current_path}\Files\{name}").Close();
+            string file_path = $@"{current_path}\Files\{name}";
+            File.Create($@"{file_path}").Close();
             Console.WriteLine("File created successfully!");
+            return file_path;
     }
 }
