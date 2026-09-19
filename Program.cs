@@ -15,7 +15,11 @@ class Program
             Console.WriteLine("5. Exit");
             Console.Write("Enter your choice: ");
 
-            int choice = Convert.ToInt32(Console.ReadLine());
+            if (!int.TryParse(Console.ReadLine(), out int choice))
+            {
+                Console.WriteLine("Invalid input.");
+                continue;
+            }
 
         switch (choice)
         {
@@ -38,6 +42,9 @@ class Program
             case 5:
                 repeat= false;
                 break;
+            default:
+                    Console.WriteLine("Invalid choice.Try again!");
+                    break;
         }
         
     }
