@@ -24,8 +24,8 @@ class Program
         switch (choice)
         {
             case 1:
-                File.Create(@"C:\Users\Shahmeer\Desktop\data.txt").Close();
-                Console.WriteLine("File created successfully!");
+                File_creator f = new File_creator();
+                f.Create();
                 break;
             case 2:
                 Reader r =new Reader();
