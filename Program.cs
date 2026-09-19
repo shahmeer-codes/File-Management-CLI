@@ -33,7 +33,6 @@ class Program
             case 5:
                 repeat= false;
                 break;
-            default:
         }
         StreamWriter w = new StreamWriter(@"C:\Users\Shahmeer\Desktop\data.txt");
         w.Write("Hello World");
