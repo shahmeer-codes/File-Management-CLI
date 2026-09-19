@@ -14,7 +14,12 @@ class Program
                 File.Create(@"C:\Users\Shahmeer\Desktop\data.txt");
                 break;
             case 2:
-                File.Create(@"C:\Users\Shahmeer\Desktop\data.txt");
+                StreamReader r = new StreamReader(@"C:\Users\Shahmeer\Desktop\data.txt");
+                string line = r.ReadToEnd();
+                while ((line = r.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
                 break;
             case 3:
                 File.Create(@"C:\Users\Shahmeer\Desktop\data.txt");
