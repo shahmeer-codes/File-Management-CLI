@@ -6,7 +6,7 @@ class Program
     {
         bool repeat= true;
         Console.WriteLine("\t<---File manager--->");
-        Console.WriteLine("\t1. Create a file\n\t2. Read a file\n\t3. Write to a file\n\t4. Delete a file\n\t5. Exit");
+        Console.WriteLine("\t1. Create a file\n\t2. Read a file\n\t3. Write or apend to a file\n\t4. Delete a file\n\t5. Exit");
         int choice = Convert.ToInt32(Console.ReadLine());
         switch (choice)
         {
@@ -22,7 +22,10 @@ class Program
                 }
                 break;
             case 3:
-                File.Create(@"C:\Users\Shahmeer\Desktop\data.txt");
+                StreamWriter w = new StreamWriter(@"C:\Users\Shahmeer\Desktop\data.txt");
+                Console.WriteLine("Enter the text to write to the file:");
+                string text = Console.ReadLine();
+                w.WriteLine(text);
                 break;
             case 4:
                 File.Create(@"C:\Users\Shahmeer\Desktop\data.txt");
