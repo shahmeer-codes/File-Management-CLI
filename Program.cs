@@ -24,11 +24,8 @@ class Program
                 Console.WriteLine("File created successfully!");
                 break;
             case 2:
-                StreamReader r = new StreamReader(@"C:\Users\Shahmeer\Desktop\data.txt");
-                string line = r.ReadToEnd();
-                Console.WriteLine(line);
-               
-                r.Close();
+                Reader r =new Reader();
+                r.Read();
                 break;
             case 3:
                 StreamWriter writer = new StreamWriter(@"C:\Users\Shahmeer\Desktop\data.txt");
