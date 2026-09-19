@@ -5,6 +5,9 @@ class Program
     public static void Main(string[] args)
     {
         bool repeat= true;
+        Console.WriteLine("Welcome to the File Manager!");
+        File_selector fs = new File_selector();
+        string file_name=fs.Select();
         while(repeat)
         {
         Console.WriteLine("<--- File Manager --->");
