@@ -9,6 +9,6 @@ class File_selector{
             }
         Console.Write("Select a working directory file from the list below : ");
         int c= Convert.ToInt32(Console.ReadLine());
-        return s[c];
+        return s[c-1];
     }
 }

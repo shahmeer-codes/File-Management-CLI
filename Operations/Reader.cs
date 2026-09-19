@@ -1,8 +1,9 @@
 using System;
 class Reader{
-    public void Read(){
-        StreamReader r = new StreamReader(@"C:\Users\Shahmeer\Desktop\data.txt");
+    public void Read(string name){
+        StreamReader r = new StreamReader($@"{name}");
                 string line = r.ReadToEnd();
+                
                 Console.WriteLine(line);
                 r.Close();
     }
